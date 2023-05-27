@@ -1,4 +1,4 @@
-variable "test"{
-    default =  "test"
-    description = "test"
+variable "test" {
+  default     = "test"
+  description = "test"
 }
