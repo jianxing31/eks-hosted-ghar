@@ -12,7 +12,7 @@ metadata:
 spec:
   template:
     spec:
-      repository: jianxing31/my_project
+      repository: "${target_repo}"
       labels:
       - test-runner
 ---

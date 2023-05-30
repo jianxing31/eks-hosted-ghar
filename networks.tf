@@ -50,9 +50,6 @@ resource "aws_nat_gateway" "nat" {
   depends_on = [aws_internet_gateway.igw]
 }
 
-
-
-
 # data "aws_nat_gateway" "nat" {
 
 #   filter {
@@ -60,7 +57,6 @@ resource "aws_nat_gateway" "nat" {
 #     values = ["my-nat"]
 #   }
 # }
-
 
 data "aws_availability_zones" "available" {}
 
@@ -75,7 +71,6 @@ resource "aws_subnet" "private-us-east-1a" {
     "kubernetes.io/cluster/${var.cluster_name}" = "owned"
   }
 }
-
 resource "aws_subnet" "private-us-east-1b" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.10.30.0/24"
