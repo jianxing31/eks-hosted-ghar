@@ -35,14 +35,27 @@ variable "target_repo" {
 ```
 Note that for safety reasons, it's not recommended hardcode the token in the code. You can use terraform variable or use terraform.tfvars to save the token.
 
-- Deploy eks-hosted ghar
-Install all providers
+### 2. Deploy EKS-hosted ghar cluster
+
+- Install all providers
 ```shell
 terraform init
 ```
-Apply the ghar
+- Apply the ghar
 ```shell
 terraform apply
+```
+
+### 3. Check cluster status
+
+- Connect to eks cluster
+```shell
+aws eks --region us-east-1 update-kubeconfig --name ghar_test
+```
+- Check cluster status with kubectl
+Example: 
+```shell
+kubectl get pods -A
 ```
 ## Reference
 [Github action runner](https://github.com/actions/actions-runner-controller/blob/master/docs/quickstart.md)
