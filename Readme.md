@@ -37,4 +37,5 @@ terraform apply
 ```
 ## Reference
 [Github action runner](https://github.com/actions/actions-runner-controller/blob/master/docs/quickstart.md)
+
 [Set eks cluster with Karpenter enabled](https://github.com/antonputra/tutorials/tree/main/lessons/114)
