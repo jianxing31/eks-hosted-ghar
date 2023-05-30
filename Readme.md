@@ -53,7 +53,7 @@ terraform apply
 aws eks --region us-east-1 update-kubeconfig --name ghar_test
 ```
 - Check cluster status with kubectl
-Example: 
+Example:
 ```shell
 kubectl get pods -A
 ```
