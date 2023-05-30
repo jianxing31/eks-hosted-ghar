@@ -24,6 +24,15 @@ variable "pat_token" {
   description = "The pat token of you github account"
 }
 ```
+
+- Set the value of your target repo
+```shell
+variable "target_repo" {
+  type        = string
+  default     = "your_target_repo_name, e.g. jianxing31/eks-hosted-ghar"
+  description = "Your target repo that use the action runner"
+}
+```
 Note that for safety reasons, it's not recommended hardcode the token in the code. You can use terraform variable or use terraform.tfvars to save the token.
 
 - Deploy eks-hosted ghar
