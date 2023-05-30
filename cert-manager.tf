@@ -23,7 +23,7 @@ locals {
 
 
 resource "helm_release" "arc" {
-  namespace        = "actions-runner-system"
+  namespace        = local.arc_namespace
   create_namespace = true
 
   name       = local.arc_release
