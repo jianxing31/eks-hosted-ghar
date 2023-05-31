@@ -2,7 +2,7 @@
 
 ## About
 This repo is for setting a self-hosted Github Action Runner system on Eks. Karpenter is used for auto scaling because it's more flexible in selecting appropriate node types. The whole infrastructure is managed by terraform for safety and repeatability.
-![architect.png](https://github.com/jianxing31/eks-hosted-ghar/images/architect.png)
+![architect.png](https://github.com/jianxing31/eks-hosted-ghar/blob/main/images/architect.png)
 ## Getting Started
 ### 1. set up environments
 - set aws environment variables
