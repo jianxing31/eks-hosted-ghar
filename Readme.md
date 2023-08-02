@@ -83,6 +83,10 @@ jobs:
           extra_args: --all-files --show-diff-on-failure
 ```
 
+
+<!-- BEGIN_TF_DOCS --> 
+<!-- END_TF_DOCS -->
+
 ## Reference
 [Github action runner](https://github.com/actions/actions-runner-controller/blob/master/docs/quickstart.md)
 
