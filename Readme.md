@@ -53,11 +53,40 @@ terraform apply
 ```shell
 aws eks --region us-east-1 update-kubeconfig --name ghar_test
 ```
-- Check cluster status with kubectl
+- Check cluster status with kubectl   
 Example:
 ```shell
 kubectl get pods -A
 ```
+
+### 4. Use action runner in your repo
+
+- Create a workflow to use the runner   
+Example workflow:
+```shell
+name: lint
+on:
+  - pull_request
+
+jobs:
+  lint:
+    runs-on: test-runner # Your runenr name
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.0
+      - uses: pre-commit/action@v2.0.2
+        with:
+          extra_args: --all-files --show-diff-on-failure
+```
+
+
+<!-- BEGIN_TF_DOCS --> 
+<!-- END_TF_DOCS -->
+
 ## Reference
 [Github action runner](https://github.com/actions/actions-runner-controller/blob/master/docs/quickstart.md)
 
