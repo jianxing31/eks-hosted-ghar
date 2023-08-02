@@ -53,7 +53,7 @@ terraform apply
 ```shell
 aws eks --region us-east-1 update-kubeconfig --name ghar_test
 ```
-- Check cluster status with kubectl
+- Check cluster status with kubectl   
 Example:
 ```shell
 kubectl get pods -A
@@ -61,7 +61,7 @@ kubectl get pods -A
 
 ### 4. Use action runner in your repo
 
-- Create a workflow to use the runner
+- Create a workflow to use the runner   
 Example workflow:
 ```shell
 name: lint
