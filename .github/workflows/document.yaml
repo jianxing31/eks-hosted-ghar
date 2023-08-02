@@ -6,8 +6,6 @@ jobs:
   documentation:
     name: Documentation
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # To push a branch 
     steps:
       - uses: actions/checkout@v3
         with:
